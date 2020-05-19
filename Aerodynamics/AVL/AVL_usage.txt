@@ -1,0 +1,56 @@
+AVL
+
+5/19/2020
+from video: https://youtu.be/ZQB9qrPp77w
+
+DESCRIPTION OF DOCS
+avl_doc	: documentation, how to import aerodynamic data and other detailed information
+README	:
+session	: keyboard inputs
+
+runs directory: holds data of models (airplanes)
+	.avl	: describes configuration or geometry of airplane
+	.mass	: describes mass distribution and defines units
+	.run	: run case, define different aerodynamic parameters
+
+Avl3 > runs directory:
+
+Example in video: SuperGee 
+
+load file:			load <FILEPATH>
+for options of current menu:	?
+to look at geometry:		g
+	use keys (should be in window) to alter graphics
+	<space> to exit
+<enter> to return to main menu
+to execute a run case: 		x
+	will solve system of equations
+	can look at trim
+	view graphics loading (in geometry)
+to look at Trefftz Plane Plot:	t
+	shows lift distributuion and state variables
+<enter> to return to main menu
+
+to input mass distribution:	mass
+	(be in main menu)
+also run case file:
+	run case lists aerodynamic/flight state
+	to run: 	case <FILEPATH>
+to go to operation menu: 	oper
+	runs until solution converges
+	gives deflection
+can alter control surface angle use command keys
+to save an output/result (ex: stability derivative)
+	input:			ST <DESIRED_FILENAME/txt>
+		saves to place in computer
+		can oppen to see top level results
+to export visuals:
+	go to geometry menu:	g
+	make hardcopy plot:	h
+	saves it to a .ps (Postscript file)
+	saving other plots will append to the .ps file
+	quite program after:	quit
+		will save properly
+
+
+	
