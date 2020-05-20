@@ -1,5 +1,7 @@
 AVL
 
+dowloading AVL: http://web.mit.edu/drela/Public/web/avl/
+
 5/19/2020
 from video: https://youtu.be/ZQB9qrPp77w
 
@@ -51,6 +53,75 @@ to export visuals:
 	saving other plots will append to the .ps file
 	quite program after:	quit
 		will save properly
+
+5/19/2020
+video: https://youtu.be/1ReGB8ai_PQ
+
+Modeling one's own airplane
+
+Geometry Input File 	: .avl
+Mass file (units)	: .mass
+Trim characteristics	: .run
+
+Coordinates for plane
+
+
+
+		_
+	       | |
+	       | |
+	_______| |________
+       |_______(o)________|  ------->  Y
+	      Z| |
+	     __| |__
+	    |___|___|
+		
+		|
+		|
+		|
+	        v  X
+
+1. copy .avl file to use as template
+
+Modify for own plane
+
+2	Mach
+3	Symmetry		(if want to model half model in wind tunnel)
+4	Reference		(area chord span)
+5	Moment Refernce Location	(arbitrary)
+6	Friction Coefficient		(constant friction to CG) <-- deleted
+
+SURFACE	(anything that produces lift)
+wing	(name surface)
+# Horseshoe Vortex Distribution
+10  1.0  22  1.0   ! Nchord   Cspace   Nspan  Sspace (look up terms in avl)
+
+# reflect image wing about y=0 plane
+YDUPLICATE
+	0.0 	(position of plane to be reflected)
+
+# twist angle bias for whole surface
+ANGLE
+	2.00
+
+SCALE <-- deleted
+
+TRANSLATE
+0.3 0 0 (distance from reference point)
+
+-----definitions for sections-----
+SECTION	(define rectangle 
+	/section definitions/
+
+AFIL	(airfoil file, get .dat) [ avl lcontains NACA ]
+
+CONTROL	
+<name> 	<gain>	<xhinge (relative)> <hinge axis as vector> <Sgn dup (movement on opposite side)>
+
+
+
+
+
 
 
 	
